@@ -1,0 +1,49 @@
+/* Ribbon Link Widget — MIT License */
+/* ตั้งค่าพื้นฐาน */
+:root{
+  --ribbon-size: 120px;  /* ปรับความกว้างริบบิ้น */
+  --grayness: 50%;       /* ค่าเริ่ม grayscale */
+  --z-ribbon: 9999;      /* z-index */
+}
+
+/* สไตล์สำหรับลิงก์ริบบิ้น (ตัวครอบ) */
+.ribbon{
+  position: fixed;
+  display: inline-block;
+  width: var(--ribbon-size);
+  height: var(--ribbon-size);
+  z-index: var(--z-ribbon);
+  line-height: 0; /* ตัดช่องว่าง */
+  text-decoration: none;
+}
+
+/* ตัวเลือกระบุตำแหน่ง 4 มุม */
+.ribbon--top-left{    top: 0;    left: 0; }
+.ribbon--top-right{   top: 0;    right: 0; }
+.ribbon--bottom-left{ bottom: 0; left: 0; }
+.ribbon--bottom-right{bottom: 0; right: 0; }
+
+/* รูปริบบิ้นด้านใน */
+.wpm-ribbon{
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: none;
+}
+
+/* ทำเป็นโทนเทา 50% พร้อม hover กลับเป็นสี */
+.gray-50 .wpm-ribbon, .gray-50.wpm-ribbon{
+  filter: grayscale(var(--grayness));
+  transition: filter .2s ease-in-out;
+}
+.gray-50:hover .wpm-ribbon, .gray-50.wpm-ribbon:hover{
+  filter: grayscale(0%);
+}
+
+/* ยกเว้นโทนเทา */
+.no-gray .wpm-ribbon{ filter: none !important; }
+
+/* ตัวช่วยสำหรับหน้าจอเล็ก: ลดขนาดริบบิ้นอัตโนมัติ */
+@media (max-width: 480px){
+  :root{ --ribbon-size: 88px; }
+}

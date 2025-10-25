@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ribbon Link Widget — Demo</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body{font-family: system-ui, -apple-system, Segoe UI, Tahoma, sans-serif; margin:0; padding:0;}
+    main{min-height:100vh; display:grid; place-items:center; padding:2rem;}
+    .card{max-width:780px; width:100%; border:1px solid #e5e7eb; border-radius:16px; padding:24px; box-shadow:0 2px 16px rgba(0,0,0,.06);}
+    h1{margin:0 0 .25rem; font-size:1.6rem;}
+    p{margin:.25rem 0 .75rem; color:#374151;}
+    code{background:#f3f4f6; padding:.125rem .375rem; border-radius:6px;}
+    .grid{display:grid; gap:12px; grid-template-columns: repeat(2, minmax(0,1fr));}
+    .box{border:1px dashed #d1d5db; border-radius:12px; padding:12px;}
+    .hint{font-size:.875rem; color:#6b7280;}
+  </style>
+</head>
+<body>
+
+  <!-- ตัวอย่างตามที่ผู้ใช้ให้มา (ล่างซ้าย, เปิดแท็บใหม่) -->
+  <a class="ribbon ribbon--bottom-left gray-50"
+     href="https://www.royaloffice.th/25/10/2025/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%B4-12-08-2566/"
+     target="_blank" rel="noopener">
+    <img src="assets/ribbon-bottom-left.svg" class="wpm-ribbon" alt="กลับหน้าแรก">
+  </a>
+
+  <main>
+    <div class="card">
+      <h1>Ribbon Link Widget</h1>
+      <p>ตัวอย่างวิธีติดริบบิ้น 4 มุม และการใช้ <code>grayscale(50%)</code> พร้อมเอฟเฟกต์ hover</p>
+
+      <div class="grid">
+        <div class="box">
+          <div class="hint">บนซ้าย</div>
+          <a class="ribbon ribbon--top-left gray-50" href="#" aria-label="Top Left">
+            <img src="assets/ribbon-top-left.svg" class="wpm-ribbon" alt="Top Left Ribbon">
+          </a>
+        </div>
+        <div class="box">
+          <div class="hint">บนขวา</div>
+          <a class="ribbon ribbon--top-right gray-50" href="#" aria-label="Top Right">
+            <img src="assets/ribbon-top-right.svg" class="wpm-ribbon" alt="Top Right Ribbon">
+          </a>
+        </div>
+        <div class="box">
+          <div class="hint">ล่างซ้าย</div>
+          <a class="ribbon ribbon--bottom-left gray-50" href="#" aria-label="Bottom Left">
+            <img src="assets/ribbon-bottom-left.svg" class="wpm-ribbon" alt="Bottom Left Ribbon">
+          </a>
+        </div>
+        <div class="box">
+          <div class="hint">ล่างขวา</div>
+          <a class="ribbon ribbon--bottom-right gray-50" href="#" aria-label="Bottom Right">
+            <img src="assets/ribbon-bottom-right.svg" class="wpm-ribbon" alt="Bottom Right Ribbon">
+          </a>
+        </div>
+      </div>
+
+      <p class="hint">Tip: เปลี่ยนขนาดที่ <code>:root { --ribbon-size: 120px; }</code> และปรับเปอร์เซ็นต์เทาที่ <code>:root { --grayness: 50%; }</code></p>
+    </div>
+  </main>
+</body>
+</html>
