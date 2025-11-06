@@ -29,7 +29,7 @@ body {
 }
 	</style>
 	<a href="https://www.royaloffice.th/25/10/2025/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%B4-12-08-2566/" target="_blank" > 
-  <img src="https://pmss.udonpeo.go.th/images/ribbon-bottom-right.svg" class="wpm-ribbon" alt="กลับหน้าแรก">
+  <img src="[https://pmss.udonpeo.go.th/images/ribbon-bottom-right.svg](https://github.com/mamazaki/ribbon-link-widget/blob/main/assets/)" class="wpm-ribbon" alt="กลับหน้าแรก">
 </a>
 ```
 
