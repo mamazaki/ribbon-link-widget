@@ -12,24 +12,31 @@
 
 ## การใช้งานแบบเร็ว (Quick Start)
 
-1) ใส่ไฟล์ CSS
+1) วางโค้ดลิงก์ริบบิ้นใน `<body>` (ตัวอย่างล่างซ้าย):
 ```html
-<link rel="stylesheet" href="styles.css">
-```
-
-2) วางโค้ดลิงก์ริบบิ้นใน `<body>` (ตัวอย่างล่างซ้าย):
-```html
-<a class="ribbon ribbon--bottom-left gray-50"
-   href="https://www.royaloffice.th/25/10/2025/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%B4-12-08-2566/"
-   target="_blank" rel="noopener">
-  <img src="assets/ribbon-bottom-left.svg" class="wpm-ribbon" alt="กลับหน้าแรก">
+	<style>
+		.wpm-ribbon { 
+			position: fixed; 
+			z-index: 99999999; 
+			right: -1rem; 
+			bottom: -.8rem; 
+			max-width: 30%; 
+			cursor: pointer; 
+			-webkit-backface-visibility: hidden; 
+}
+body {
+	padding-bottom: 100px; /* Add padding to prevent content overlap */
+}
+	</style>
+	<a href="https://www.royaloffice.th/25/10/2025/%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%B4-12-08-2566/" target="_blank" > 
+  <img src="https://pmss.udonpeo.go.th/images/ribbon-bottom-right.svg" class="wpm-ribbon" alt="กลับหน้าแรก">
 </a>
 ```
 
 > เปลี่ยนภาพเป็นมุมอื่นได้: `assets/ribbon-top-left.svg`, `assets/ribbon-top-right.svg`, `assets/ribbon-bottom-right.svg`  
 > เปลี่ยนตำแหน่งโดยสลับคลาส: `ribbon--top-left`, `ribbon--top-right`, `ribbon--bottom-left`, `ribbon--bottom-right`
 
-3) ป้ายคลาส `gray-50` ถ้าต้องการโทนเทา 50% (เอาออกได้ถ้าไม่ต้องการ)
+2) ป้ายคลาส `gray-50` ถ้าต้องการโทนเทา 50% (เอาออกได้ถ้าไม่ต้องการ)
 
 ---
 
@@ -43,18 +50,6 @@
 :root { --grayness: 50%; } /* 0% = สีปกติ, 100% = ขาวดำ */
 ```
 - ปิดเอฟเฟกต์โทนเทาเฉพาะบางอัน: เอาคลาส `gray-50` ออก หรือเพิ่มคลาส `no-gray`
-
-## โครงสร้างโปรเจกต์
-```
-ribbon-link-widget/
-├─ assets/
-│  ├─ ribbon-bottom-left.svg
-│  ├─ ribbon-bottom-right.svg
-│  ├─ ribbon-top-left.svg
-│  └─ ribbon-top-right.svg
-├─ index.html
-├─ styles.css
-├─ LICENSE
 └─ README.md
 ```
 
